@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/navigation/Navbar";
+import { siteConfig } from "@/data/site";
+
 import "./globals.css";
 
 const geist = Geist({
@@ -10,11 +14,10 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nikhil Pathak | Software Developer",
+    default: siteConfig.title,
     template: "%s | Nikhil Pathak",
   },
-  description:
-    "Portfolio website for Nikhil Pathak, a software developer focused on backend engineering, full-stack development, and AI-powered applications.",
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
@@ -24,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.variable}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

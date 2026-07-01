@@ -1,0 +1,15 @@
+import type { ComponentPropsWithoutRef } from "react";
+
+import { cn } from "@/utils/cn";
+
+export function Badge({ className, ...props }: ComponentPropsWithoutRef<"span">) {
+  return (
+    <span
+      className={cn(
+        "inline-flex items-center rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100",
+        className,
+      )}
+      {...props}
+    />
+  );
+}
