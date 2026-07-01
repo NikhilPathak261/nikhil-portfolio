@@ -11,6 +11,7 @@ export interface Project {
   completion: string;
   overview: string[];
   problem: string;
+  modules: string[];
   techStack: string[];
   features: string[];
   currentFocus: string;

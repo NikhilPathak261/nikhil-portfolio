@@ -1,5 +1,7 @@
 import { ProjectCard } from "@/components/cards/ProjectCard";
+import { ArrowRight } from "@/components/icons/LucideIcon";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
+import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow, Paragraph, SectionHeading } from "@/components/ui/Typography";
 import { projects } from "@/data/profile";
 
@@ -18,6 +20,12 @@ export function ProjectsSection() {
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
+      </div>
+      <div className="mt-8">
+        <ButtonLink href="/projects" variant="secondary">
+          View Projects Page
+          <ArrowRight aria-hidden size={18} />
+        </ButtonLink>
       </div>
     </SectionWrapper>
   );

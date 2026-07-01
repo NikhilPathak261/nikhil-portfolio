@@ -18,7 +18,7 @@ export const navItems: NavItem[] = [
   },
   {
     label: "Projects",
-    href: "/#projects",
+    href: "/projects",
     sectionId: "projects",
   },
   {

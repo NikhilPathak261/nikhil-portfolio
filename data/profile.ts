@@ -114,6 +114,18 @@ export const projects: Project[] = [
     ],
     problem:
       "Traditional communication practice platforms often lack structured evaluation, intelligent matchmaking, and measurable progress tracking.",
+    modules: [
+      "Authentication System",
+      "User Management",
+      "Debate Arena",
+      "Group Discussion",
+      "Roleplay",
+      "Matchmaking Engine",
+      "Dashboard",
+      "Reputation System",
+      "Skill Tracking",
+      "Feedback Engine",
+    ],
     techStack: [
       "Spring Boot Backend",
       "React Frontend",

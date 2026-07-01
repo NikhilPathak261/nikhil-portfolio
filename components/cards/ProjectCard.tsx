@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 import type { Project } from "@/types/profile";
 
+import { ArrowRight } from "@/components/icons/LucideIcon";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Paragraph } from "@/components/ui/Typography";
@@ -31,7 +34,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Badge key={tech}>{tech}</Badge>
           ))}
         </div>
-        <p className="mt-6 text-sm font-semibold text-cyan-200">Case study coming soon</p>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="mt-6 inline-flex items-center gap-2 rounded-lg text-sm font-semibold text-cyan-200 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+        >
+          View case study
+          <ArrowRight aria-hidden size={16} />
+        </Link>
       </div>
     </Card>
   );
