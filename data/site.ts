@@ -1,5 +1,7 @@
 import type { SiteConfig, SocialLink } from "@/types/site";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const siteConfig: SiteConfig = {
   name: "Nikhil Pathak",
   title: "Nikhil Pathak | Software Developer",
@@ -7,8 +9,7 @@ export const siteConfig: SiteConfig = {
     "Software developer portfolio for Nikhil Pathak, focused on Java, Spring Boot, backend engineering, full-stack development, and AI-powered applications.",
   email: "[Professional Email]",
   resumePath: "/resume/Resume.pdf",
-  baseUrl: "https://example.com",
-  ogImage: "/images/seo/og-image.png",
+  baseUrl: siteUrl,
 };
 
 export const socialLinks: SocialLink[] = [

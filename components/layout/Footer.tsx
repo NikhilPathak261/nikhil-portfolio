@@ -30,6 +30,9 @@ export function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-label={item.label}
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-lg px-2 py-1 text-sm text-slate-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               >
                 {item.platform}

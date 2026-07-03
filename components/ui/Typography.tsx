@@ -5,7 +5,10 @@ import { cn } from "@/utils/cn";
 export function SectionHeading({ className, ...props }: ComponentPropsWithoutRef<"h2">) {
   return (
     <h2
-      className={cn("text-3xl font-bold tracking-normal text-white sm:text-4xl", className)}
+      className={cn(
+        "text-balance text-3xl font-bold tracking-normal text-white sm:text-4xl",
+        className,
+      )}
       {...props}
     />
   );
@@ -21,5 +24,5 @@ export function Eyebrow({ className, ...props }: ComponentPropsWithoutRef<"p">) 
 }
 
 export function Paragraph({ className, ...props }: ComponentPropsWithoutRef<"p">) {
-  return <p className={cn("text-base leading-7 text-slate-300", className)} {...props} />;
+  return <p className={cn("text-pretty text-base leading-7 text-slate-300", className)} {...props} />;
 }

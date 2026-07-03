@@ -7,7 +7,7 @@ type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 disabled:pointer-events-none disabled:opacity-60";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl text-center font-medium transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 disabled:pointer-events-none disabled:opacity-60";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-blue-500 text-white shadow-sm shadow-blue-500/20 hover:bg-blue-400",
@@ -16,9 +16,9 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "h-9 px-3 text-sm",
-  md: "h-11 px-5 text-sm",
-  lg: "h-12 px-6 text-base",
+  sm: "px-3 py-2 text-sm",
+  md: "px-5 py-2.5 text-sm",
+  lg: "px-6 py-3 text-base",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

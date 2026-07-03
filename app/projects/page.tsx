@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.baseUrl}/projects`,
   },
+  openGraph: {
+    title: "Projects | Nikhil Pathak",
+    description:
+      "Projects by Nikhil Pathak, including VakSetu, a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, and MySQL.",
+    url: "/projects",
+    siteName: "Nikhil Pathak Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Projects | Nikhil Pathak",
+    description:
+      "Projects by Nikhil Pathak, including VakSetu, a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, and MySQL.",
+  },
 };
 
 export default function ProjectsPage() {

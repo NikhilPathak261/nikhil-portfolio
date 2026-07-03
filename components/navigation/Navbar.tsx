@@ -14,6 +14,14 @@ export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     const updateScrollState = () => setHasScrolled(window.scrollY > 8);
 
     updateScrollState();
@@ -56,6 +64,7 @@ export function Navbar() {
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 text-slate-100 transition hover:border-cyan-300 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 md:hidden"
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-controls="mobile-navigation"
             aria-expanded={isOpen}
             onClick={() => setIsOpen((current) => !current)}
           >
@@ -64,7 +73,7 @@ export function Navbar() {
         </nav>
 
         {isOpen ? (
-          <div className="border-t border-slate-800 py-3 md:hidden">
+          <div id="mobile-navigation" className="border-t border-slate-800 py-3 md:hidden">
             <div className="grid gap-1">
               {navItems.map((item) => (
                 <Link

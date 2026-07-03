@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="grid min-h-[calc(100vh-232px)] gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div>
           <Eyebrow>{profile.title}</Eyebrow>
-          <h1 className="max-w-4xl text-5xl font-bold tracking-normal text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-balance text-5xl font-bold tracking-normal text-white sm:text-6xl lg:text-7xl">
             {profile.fullName}
           </h1>
           <Paragraph className="mt-6 max-w-2xl text-lg">{profile.tagline}</Paragraph>
@@ -37,7 +37,7 @@ export function HeroSection() {
         <div className="rounded-2xl border border-slate-700 bg-slate-900/70 p-6 shadow-2xl shadow-slate-950/30">
           <div className="grid gap-4">
             <Badge>{profile.currentStatus}</Badge>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid gap-3 sm:grid-cols-3">
               {profile.brandWords.map((word) => (
                 <div key={word} className="rounded-xl border border-slate-700 bg-slate-950 p-4">
                   <p className="text-sm font-semibold text-white">{word}</p>

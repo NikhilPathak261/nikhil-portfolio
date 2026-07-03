@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteConfig.baseUrl}/projects/vaksetu`,
   },
+  openGraph: {
+    title: "VakSetu Case Study | Nikhil Pathak",
+    description:
+      "VakSetu case study by Nikhil Pathak, covering a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, REST APIs, MySQL, WebSocket, and WebRTC signaling.",
+    url: "/projects/vaksetu",
+    siteName: "Nikhil Pathak Portfolio",
+    type: "article",
+  },
+  twitter: {
+    card: "summary",
+    title: "VakSetu Case Study | Nikhil Pathak",
+    description:
+      "VakSetu case study by Nikhil Pathak, covering a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, REST APIs, MySQL, WebSocket, and WebRTC signaling.",
+  },
 };
 
 export default function VakSetuPage() {
@@ -38,7 +52,7 @@ export default function VakSetuPage() {
               Back to projects
             </Link>
             <Eyebrow>Case Study</Eyebrow>
-            <h1 className="text-5xl font-bold tracking-normal text-white sm:text-6xl">
+            <h1 className="text-balance text-5xl font-bold tracking-normal text-white sm:text-6xl">
               {vakSetu.title}
             </h1>
             <Paragraph className="mt-6 max-w-3xl text-lg">{vakSetu.overview[0]}</Paragraph>
@@ -120,11 +134,14 @@ export default function VakSetuPage() {
             <Card>
               <SectionHeading className="text-2xl sm:text-3xl">Authentication</SectionHeading>
               <div className="mt-5 flex flex-wrap gap-2">
-                {["Spring Security", "JWT Authentication", "Refresh Tokens", "Role Based Access Control"].map(
-                  (item) => (
-                    <Badge key={item}>{item}</Badge>
-                  ),
-                )}
+                {[
+                  "Spring Security",
+                  "JWT Authentication",
+                  "Refresh Tokens",
+                  "Role Based Access Control",
+                ].map((item) => (
+                  <Badge key={item}>{item}</Badge>
+                ))}
               </div>
             </Card>
 
@@ -139,9 +156,11 @@ export default function VakSetuPage() {
             <Card>
               <SectionHeading className="text-2xl sm:text-3xl">API Structure</SectionHeading>
               <div className="mt-5 flex flex-wrap gap-2">
-                {["RESTful APIs", "DTO Based API Design", "Service Layer Architecture"].map((item) => (
-                  <Badge key={item}>{item}</Badge>
-                ))}
+                {["RESTful APIs", "DTO Based API Design", "Service Layer Architecture"].map(
+                  (item) => (
+                    <Badge key={item}>{item}</Badge>
+                  ),
+                )}
               </div>
             </Card>
           </div>

@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   background: #0b0f19;
   color: #ffffff;
   font-family: var(--font-geist), Inter, system-ui, sans-serif;
+  overflow-x: clip;
 }
 
 * {
@@ -31,4 +33,15 @@ body {
 ::selection {
   background: #06b6d4;
   color: #0b0f19;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
