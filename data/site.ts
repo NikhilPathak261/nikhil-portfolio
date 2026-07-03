@@ -7,9 +7,10 @@ export const siteConfig: SiteConfig = {
   title: "Nikhil Pathak | Software Developer",
   description:
     "Software developer portfolio for Nikhil Pathak, focused on Java, Spring Boot, backend engineering, full-stack development, and AI-powered applications.",
-  email: "[Professional Email]",
+  email: "nikhilpathak261@gmail.com",
   resumePath: "/resume/Resume.pdf",
   baseUrl: siteUrl,
+  ogImage: "/opengraph-image",
 };
 
 export const socialLinks: SocialLink[] = [

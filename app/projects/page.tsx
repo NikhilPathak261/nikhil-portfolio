@@ -21,13 +21,22 @@ export const metadata: Metadata = {
       "Projects by Nikhil Pathak, including VakSetu, a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, and MySQL.",
     url: "/projects",
     siteName: "Nikhil Pathak Portfolio",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Nikhil Pathak Projects",
+      },
+    ],
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Projects | Nikhil Pathak",
     description:
       "Projects by Nikhil Pathak, including VakSetu, a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, and MySQL.",
+    images: [siteConfig.ogImage],
   },
 };
 

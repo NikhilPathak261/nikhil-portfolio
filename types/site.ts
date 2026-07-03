@@ -5,7 +5,7 @@ export interface SiteConfig {
   email: string;
   resumePath: string;
   baseUrl: string;
-  ogImage?: string;
+  ogImage: string;
 }
 
 export interface SocialLink {

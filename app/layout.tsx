@@ -3,7 +3,7 @@ import { Geist } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/navigation/Navbar";
-import { siteConfig } from "@/data/site";
+import { siteConfig, socialLinks } from "@/data/site";
 
 import "./globals.css";
 
@@ -35,18 +35,33 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/favicon/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon/favicon.svg",
+    apple: [{ url: "/favicon/favicon.svg", type: "image/svg+xml" }],
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
     url: "/",
     siteName: "Nikhil Pathak Portfolio",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Nikhil Pathak Software Developer Portfolio",
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
 };
 
@@ -59,6 +74,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteConfig.name,
+    jobTitle: "Software Developer",
+    url: siteConfig.baseUrl,
+    email: `mailto:${siteConfig.email}`,
+    sameAs: socialLinks.map((link) => link.href),
+  };
+
   return (
     <html lang="en" className={geist.variable}>
       <body>
@@ -71,6 +96,11 @@ export default function RootLayout({
         <Navbar />
         <div id="main-content">{children}</div>
         <Footer />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </body>
     </html>
   );

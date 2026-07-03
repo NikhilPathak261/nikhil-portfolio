@@ -25,13 +25,22 @@ export const metadata: Metadata = {
       "VakSetu case study by Nikhil Pathak, covering a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, REST APIs, MySQL, WebSocket, and WebRTC signaling.",
     url: "/projects/vaksetu",
     siteName: "Nikhil Pathak Portfolio",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "VakSetu Case Study by Nikhil Pathak",
+      },
+    ],
     type: "article",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "VakSetu Case Study | Nikhil Pathak",
     description:
       "VakSetu case study by Nikhil Pathak, covering a full-stack communication improvement platform built with Spring Boot, React, Spring Security, JWT, REST APIs, MySQL, WebSocket, and WebRTC signaling.",
+    images: [siteConfig.ogImage],
   },
 };
 
