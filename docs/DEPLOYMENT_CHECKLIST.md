@@ -4,9 +4,9 @@
 
 - Run `npm run verify`.
 - Run `npm run verify:production`.
+- Run `npm run check:gaps`.
 - Add `NEXT_PUBLIC_SITE_URL` in Vercel with the final production URL.
 - Add `public/resume/Resume.pdf` before enabling resume downloads.
-- Add favicon and social preview assets before final production launch.
 - Replace VakSetu `Coming Soon` sections when real challenges, roadmap, and screenshots are available.
 
 ## Vercel Settings
@@ -34,3 +34,11 @@ npm run verify:production
 ```
 
 This command builds the app, starts the production server locally, and verifies the public routes.
+
+## Content Gap Check
+
+```bash
+npm run check:gaps
+```
+
+This command prints remaining content and deployment inputs required before final launch.

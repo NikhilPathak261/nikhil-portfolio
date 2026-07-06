@@ -21,6 +21,12 @@ For local production route verification:
 npm run verify:production
 ```
 
+To list remaining launch content gaps:
+
+```bash
+npm run check:gaps
+```
+
 ## Deployment
 
 Set the production URL before deploying:

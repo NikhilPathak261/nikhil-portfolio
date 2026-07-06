@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "verify": "npm run lint && npm run build",
     "verify:production": "npm run build && node scripts/verify-production.mjs",
+    "check:gaps": "node scripts/check-content-gaps.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
